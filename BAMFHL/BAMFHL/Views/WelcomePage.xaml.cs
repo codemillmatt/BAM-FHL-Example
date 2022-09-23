@@ -1,9 +1,13 @@
+using BAMFHL.ViewModels;
+
 namespace BAMFHL.Views;
 
 public partial class WelcomePage : ContentPage
 {
-	public WelcomePage()
+	public WelcomePage(WelcomeViewModel welcomeViewModel)
 	{
 		InitializeComponent();
+
+		BindingContext = welcomeViewModel;
 	}
 }

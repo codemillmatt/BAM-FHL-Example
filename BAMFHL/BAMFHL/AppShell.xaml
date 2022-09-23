@@ -8,14 +8,14 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Welcome" IsVisible="True">
+        <Tab Title="Welcome" IsVisible="True" x:Name="WelcomeTab">
             <ShellContent
                 x:Name="WelcomeShell"
                 Title="Welcome"
                 ContentTemplate="{DataTemplate views:WelcomePage}"
                 Route="WelcomePage" />
         </Tab>
-        <Tab Title="My Dashboard">
+        <Tab Title="My Dashboard" x:Name="DashboardTab">
             <ShellContent
                 Title="Dashboard"
                 ContentTemplate="{DataTemplate views:DashboardPage}"

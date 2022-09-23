@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BAMFHL.Views.DashboardPage"
              Title="DashboardPage">
-    <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="*,*,*" RowSpacing="10">
+    <Grid ColumnDefinitions="Auto,Auto" RowDefinitions="*,*,*" RowSpacing="10" ColumnSpacing="10">
         <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
             <Grid ColumnDefinitions="Auto,*" RowDefinitions="70, 50, *">
                 <Image Source="man12.png" Aspect="Fill" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="3" Opacity=".5"/>
                 <Label Text="XXX" Grid.Column="0" Grid.Row="0" Margin="20"/>
-                <Label Text="Hiring Resources" TextColor="{StaticResource Gray400}" Grid.Row="0" Grid.Column="1" Margin="0,20"/>
+                <Label Text="Hiring Resources" TextColor="Gray" Grid.Row="0" Grid.Column="1" Margin="0,20"/>
                 <BoxView Grid.Row="1" Grid.Column="0" WidthRequest="7" HeightRequest="30" Color="OrangeRed"/>
                 <Label Text="Resume Review &amp; Interview Prep" FontSize="Large" Grid.Column="1" Grid.Row="1" />
                 <Label Text="Contact Recruiter to learn more" TextColor="OrangeRed" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="20" 
@@ -17,17 +17,20 @@
         </Frame>
         <Frame Grid.Row="1" Grid.Column="0">
             <VerticalStackLayout>
-                <Label Text="Job Suggestions" TextColor="{StaticResource gray400}" />
+                <Label Text="Job Suggestions" TextColor="{StaticResource Gray400}" />
                 <Label Text="Job Suggestion One"/>
                 <Label Text="Job Suggestion Two"/>
                 <Label Text="Job Suggestion Three"/>
-                <Button Text="View more suggestions" BackgroundColor="OrangeRed" TextColor="White"/>
+                <Button Text="View more suggestions" BackgroundColor="OrangeRed" TextColor="White" VerticalOptions="End"/>
+            </VerticalStackLayout>
+        </Frame>
+        <Frame Grid.Row="1" Grid.Column="1">
+            <VerticalStackLayout>
+                <Label Text="Microsoft Engage"/>
             </VerticalStackLayout>
         </Frame>
         <Frame Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
-            <VerticalStackLayout>
-                <Image Source="man12.png"/>
-            </VerticalStackLayout>
+            <Label Text="Last row info goes here"/>
         </Frame>
     </Grid>
 </ContentPage>

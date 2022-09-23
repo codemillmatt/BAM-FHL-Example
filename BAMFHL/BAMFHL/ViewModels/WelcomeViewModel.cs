@@ -29,7 +29,7 @@ namespace BAMFHL.ViewModels
             // here you'd call out to MSAL and Azure AD / B2C
             _authenticationService.SignUpOrIn();
 
-            await Task.CompletedTask;
+            await Shell.Current.DisplayAlert("Display Info", "Here you'll want to hide the welcome tab & display the others with messaging", "ok");
         }
     }
 }

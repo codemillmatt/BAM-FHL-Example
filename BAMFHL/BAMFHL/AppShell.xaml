@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="BAMFHL.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:BAMFHL"
+    xmlns:views="clr-namespace:BAMFHL.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Welcome">
+            <ShellContent
+                x:Name="WelcomeShell"
+                Title="Welcome"
+                ContentTemplate="{DataTemplate views:WelcomePage}"
+                Route="WelcomePage" />
+        </Tab>
+        <Tab Title="My Dashboard">
+            <ShellContent
+                Title="Dashboard"
+                ContentTemplate="{DataTemplate views:DashboardPage}"
+                Route="DashboardPage"/>
+            <ShellContent
+                Title="My jobs"
+                ContentTemplate="{DataTemplate views:MyJobsPage}"
+                Route="MyJobsPage" />
+            <ShellContent
+                Title="Events"
+                ContentTemplate="{DataTemplate views:EventsPage}"
+                Route="EventsPage"/>
+        </Tab>
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:BAMFHL.ViewModels"
+             x:DataType="viewmodel:WelcomeViewModel"
+             x:Class="BAMFHL.Views.WelcomePage"
+             Title="{Binding Title}">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <Image Source="welcome.png" Aspect="AspectFit" HeightRequest="300" />
+        <Label Text="Welcome to APP NAME" FontSize="Title" HorizontalTextAlignment="Center"/>
+        <Label Text="The all new (what) that let's you (what) in one place." HorizontalTextAlignment="Center" 
+               Margin="0,10" TextColor="{StaticResource Gray400}"/>
+        
+        <Button Text="Sign-up" Margin="0,50" Command="{Binding SignUpOrInCommand}" />
+        <Label Text="Have an existing account? Sign in!" HorizontalTextAlignment="Center" TextColor="{StaticResource Primary}">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding SignUpOrInCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+        
+    </VerticalStackLayout>
+</ContentPage>

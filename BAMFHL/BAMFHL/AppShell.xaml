@@ -8,7 +8,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar>
-        <Tab Title="Welcome">
+        <Tab Title="Welcome" IsVisible="True">
             <ShellContent
                 x:Name="WelcomeShell"
                 Title="Welcome"
